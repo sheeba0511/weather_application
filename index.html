@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wheather Application</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="container">
+      <div class="navbar">
+        <p>Weather Dashboard</p>
+        <div class="theming_container">
+          <label for="theming_toggle" id="theming_toggle_text"
+            >Switch to dark mode
+          </label>
+          <input type="checkbox" id="theming_toggle" onchange="themingFn()" />
+        </div>
+      </div>
+      <div class="grid-container">
+        <!-- SearchBar Main -->
+        <div class="searchbar_main">
+          <p class="searchbar_text">Enter a City Name</p>
+
+          <div class="searchbar_input">
+            <form id="form" action="" method="post" onsubmit="return false;">
+              <input
+                type="text"
+                class="searchbar_input_in"
+                id="searchbar_input_in"
+                placeholder="E.g., New York, London, Tokyo"
+              />
+            </form>
+          </div>
+          <div class="searchbar_input">
+            <button type="submit" onclick="formSubmit()" class="searchbar_btn">
+              Search
+            </button>
+          </div>
+
+          <div class="horizontal-line-container">
+            <span class="line"></span>
+            <span class="text">or</span>
+            <span class="line"></span>
+          </div>
+          <div class="searchbar_input">
+            <button class="searchbar_btn location" onclick="getLocation()">
+              Use Current Location
+            </button>
+          </div>
+        </div>
+
+        <!-- dashboard main -->
+
+        <div class="dashboard_main" id="dashboard_main">
+          <div class="dashboard_main_text" id="detail_card">
+            <h3 class="dashboard_main_heading">City Name</h3>
+            <p class="dashboard_main_para">Temp: -</p>
+            <p class="dashboard_main_para">Wind: -</p>
+            <p class="dashboard_main_para">Humidity: -</p>
+          </div>
+          <div class="dashboard_main_img">
+            <img
+              id="rainy_img_logo"
+              src="C:\Users\HP PC\OneDrive\Pictures\Saved Pictures\rainy3.png"
+              alt="rainy_img_logo"
+            />
+            <p class="text moderate_text">Moderate Rain</p>
+          </div>
+        </div>
+        <!--Forecast  -->
+        <div class="forecast_section">
+          <h3 class="forecast_heading" id="forecast_heading"></h3>
+          <div class="forecast_main" id="forecast_main"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
