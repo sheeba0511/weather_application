@@ -58,7 +58,7 @@ function geolocationSuccess(position) {
   latitude = position?.coords?.latitude;
   longitude = position?.coords?.longitude;
   fetch(
-    `https://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
+    `http://nominatim.openstreetmap.org/reverse?lat=${latitude}&lon=${longitude}&format=json`
   )
     .then((response) => response?.json())
     .then((data) => {
